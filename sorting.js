@@ -8,3 +8,20 @@ var students = [
 //Sort in alphabetical order
 //If students have same name, sort descending by age
 
+const studentSort = function(arr) {
+  arr.sort(function(a, b) {
+    if (a.name > b.name) {
+      return 1
+    } else if (a.name < b.name) {
+      return -1
+    } else if (a.age < b.age) {
+      return 1
+    } else if (a.age > b.age) {
+      return -1
+    }
+    return 0
+  })
+  return students
+}
+
+console.log(studentSort(students))
